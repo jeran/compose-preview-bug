@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import dev.jeran.bug.compose.preview.ui.theme.ComposepreviewbugTheme
 
@@ -38,10 +39,26 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, locale = "fr")
 @Composable
-fun GreetingPreview() {
+private fun GreetingPreview_fr() {
     ComposepreviewbugTheme {
-        Greeting("Android")
+        Greeting(stringResource(R.string.app_name))
+    }
+}
+
+@Preview(showBackground = true, locale = "fr-rCA")
+@Composable
+private fun GreetingPreview_fr_rCA() {
+    ComposepreviewbugTheme {
+        Greeting(stringResource(R.string.app_name))
+    }
+}
+
+@Preview(showBackground = true, locale = "pt-rPT")
+@Composable
+private fun GreetingPreview_pt_rPT() {
+    ComposepreviewbugTheme {
+        Greeting(stringResource(R.string.app_name))
     }
 }
